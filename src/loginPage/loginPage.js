@@ -9,16 +9,6 @@ import '../css/loginPage.css';
 import { toast } from 'react-toastify';
 import '../css/ReactToastify.min.css';
 
-
-// class LoginPage extends Component {
-//   constructor(props) {
-//       super(props);
-//         this.state = {
-//           userName: '',
-//           password: '',
-//           showEmployee: false
-//         }
-//       }
   function checkLoginCredentials(props, userName, password) {
     console.log("User Name", props.credentials);
     if(props.credentials.username === userName && props.credentials.password === password) {

@@ -4,21 +4,13 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import '../css/bootstrap.min.css';
 
-// class EmployeeList extends Component {
-//     constructor(props) {
-//         super(props);
-//           this.state = {
-           
-//           }
-//         }
-    
+  
     function CountryList() {
         const [countryDetails, setCountryDetails] = useState([]); 
         const [selectedCountry, setSelectedCountry] = useState("All"); 
          
 
         useEffect(() => {
-            // Update the document title using the browser API
             axios.get('https://restcountries.eu/rest/v2/all?fields=name;flag;region')
                 .then(response => setCountryDetails(response.data) );
             
