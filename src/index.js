@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import mystore from './store.js';
+import './css/index.css';
+import LoginPage from './loginPage/loginPage.js';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ToastContainer
+      position='top-right'
+      autoClose={4000}
+      hideProgressBar
+      newestOnTop
+      closeOnClick
+      rtl={false}
+      pauseOnVisibilityChange
+      draggable
+      pauseOnHover
+    />  
+    <Provider store={mystore}>
+      <LoginPage />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
